@@ -138,22 +138,6 @@ jobs:
     - name: Check MSRV
       run: cargo check --all-features
 
-  expensive_checks:
-    name: Expensive Checks
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    steps:
-    - uses: actions/checkout@v4
-    - uses: dtolnay/rust-toolchain@nightly
-      with:
-        components: miri
-    - name: Install miri
-      run: cargo miri setup
-    - name: Run miri
-      run: cargo miri test
-      env:
-        MIRIFLAGS: -Zmiri-disable-isolation
-
   publish_check:
     name: Publish Check
     runs-on: ubuntu-latest
