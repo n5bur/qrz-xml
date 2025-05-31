@@ -1,0 +1,47 @@
+[package]
+name = "qrz-xml"
+version = "0.1.0"
+edition = "2021"
+authors = ["Luke Burciu <n5bur@burciu.io>"]
+license = "MIT OR Apache-2.0"
+description = "A Rust client library for the QRZ.com XML API"
+repository = "https://github.com/n5bur/qrz-xml-rs"
+documentation = "https://docs.rs/qrz-xml"
+readme = "README.md"
+keywords = ["ham-radio", "amateur-radio", "qrz", "callsign", "xml"]
+categories = ["api-bindings", "network-programming"]
+rust-version = "1.70.0"
+
+[dependencies]
+tokio = { version = "1.0", features = ["full"] }
+reqwest = { version = "0.12.18", features = ["stream"] }
+serde = { version = "1.0", features = ["derive"] }
+quick-xml = { version = "0.37.5", features = ["serde", "serialize"] }
+thiserror = "2"
+url = "2.4"
+chrono = { version = "0.4", features = ["serde"] }
+tracing = "0.1"
+
+[dev-dependencies]
+tokio-test = "0.4"
+wiremock = "0.6.3"
+serde_json = "1.0"
+env_logger = "0.11.8"
+tempfile = "3.8"
+
+[features]
+default = ["native-tls"]
+native-tls = ["reqwest/native-tls"]
+rustls-tls = ["reqwest/rustls-tls"]
+
+[[example]]
+name = "basic_lookup"
+path = "examples/basic_lookup.rs"
+
+[[example]]
+name = "dxcc_lookup"
+path = "examples/dxcc_lookup.rs"
+
+[[example]]
+name = "persist_session"
+path = "examples/persist_session.rs"
