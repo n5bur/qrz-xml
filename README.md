@@ -261,4 +261,3 @@ Users of this library must comply with QRZ.com's Terms of Service and API usage 
 
 - [QRZ.com XML API Documentation](https://www.qrz.com/docs/xml/current_spec.html)
 - [QRZ.com Subscription Plans](https://www.qrz.com/i/subscriptions.html)
-- [Ham Radio Rust Community](https://github.com/ham-radio-software)
