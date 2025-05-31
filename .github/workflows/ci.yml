@@ -5,6 +5,8 @@ on:
     branches: [ main, develop ]
   pull_request:
     branches: [ main ]
+  release:
+    types: [published]
 
 env:
   CARGO_TERM_COLOR: always
@@ -22,12 +24,12 @@ jobs:
             rust: 1.87.0  # MSRV
     steps:
     - uses: actions/checkout@v4
-    
+
     - name: Install Rust
       uses: dtolnay/rust-toolchain@master
       with:
         toolchain: ${{ matrix.rust }}
-    
+
     - name: Cache dependencies
       uses: actions/cache@v3
       with:
@@ -36,13 +38,13 @@ jobs:
           ~/.cargo/git
           target
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
-    
+
     - name: Run tests
       run: cargo test --verbose
-    
+
     - name: Run tests with all features
       run: cargo test --all-features --verbose
-    
+
     - name: Run tests with no default features
       run: cargo test --no-default-features --features rustls-tls --verbose
 

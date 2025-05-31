@@ -1,6 +1,6 @@
 [package]
 name = "qrz-xml"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Luke Burciu <n5bur@burciu.io>"]
 license = "MIT OR Apache-2.0"
@@ -10,7 +10,7 @@ documentation = "https://docs.rs/qrz-xml"
 readme = "README.md"
 keywords = ["ham-radio", "amateur-radio", "qrz", "callsign", "xml"]
 categories = ["api-bindings", "network-programming"]
-rust-version = "1.70.0"
+rust-version = "1.87.0"
 
 [dependencies]
 tokio = { version = "1.0", features = ["full"] }
