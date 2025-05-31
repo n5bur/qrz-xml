@@ -14,8 +14,8 @@ repos:
         files: \.rs$
         pass_filenames: false
       - id: cargo-fmt
-        name: cargo fmt
-        entry: cargo fmt -- --check
+        name: apply cargo fmt
+        entry: cargo fmt
         language: system
         files: \.rs$
         pass_filenames: false
