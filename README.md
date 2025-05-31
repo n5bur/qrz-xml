@@ -1,7 +1,6 @@
 # qrz-xml
 
-
-[![Build Status](https://github.com/n5bur/qrz-xml-rs/workflows/CI/badge.svg)](https://github.com/yourusername/qrz-xml-rs/actions)
+[![CI](https://github.com/n5bur/qrz-xml/actions/workflows/ci.yml/badge.svg)](https://github.com/n5bur/qrz-xml/actions/workflows/ci.yml)
 
 A safe, async Rust client library for the [QRZ.com](https://qrz.com) XML API.
 
