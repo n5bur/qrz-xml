@@ -19,7 +19,7 @@ jobs:
         rust: [stable, beta, nightly]
         include:
           - os: ubuntu-latest
-            rust: 1.81.0  # MSRV
+            rust: 1.87.0  # MSRV
     steps:
     - uses: actions/checkout@v4
     
@@ -134,7 +134,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: dtolnay/rust-toolchain@1.81.0
+    - uses: dtolnay/rust-toolchain@1.87.0
     - name: Check MSRV
       run: cargo check --all-features
 
