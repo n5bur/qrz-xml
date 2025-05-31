@@ -10,7 +10,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-qrz_xml = "0.1"
+qrz-xml = "0.1"
 tokio = { version = "1.0", features = ["full"] }
 ```
 
