@@ -16,9 +16,6 @@ use std::env;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    // Initialize logging
-    env_logger::init();
-
     // Get credentials from environment variables
     let username = env::var("QRZ_USERNAME").expect("QRZ_USERNAME environment variable must be set");
     let password = env::var("QRZ_PASSWORD").expect("QRZ_PASSWORD environment variable must be set");

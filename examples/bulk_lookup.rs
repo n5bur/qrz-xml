@@ -213,8 +213,6 @@ fn write_csv_output<P: AsRef<Path>>(
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    env_logger::init();
-
     let args: Vec<String> = env::args().collect();
     if args.len() != 3 {
         eprintln!("Usage: {} <input_file> <output_file>", args[0]);

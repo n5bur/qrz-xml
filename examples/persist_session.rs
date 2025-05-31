@@ -192,8 +192,6 @@ impl PersistentQrzXmlClient {
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    env_logger::init();
-
     let username = env::var("QRZ_USERNAME")?;
     let password = env::var("QRZ_PASSWORD")?;
 

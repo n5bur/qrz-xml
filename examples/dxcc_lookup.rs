@@ -50,9 +50,6 @@ fn parse_args() -> Result<LookupType, String> {
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    // Initialize logging
-    env_logger::init();
-
     // Parse command line arguments
     let lookup_type = match parse_args() {
         Ok(lt) => lt,
